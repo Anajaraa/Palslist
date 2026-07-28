@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Meus Pals — Checklist Palworld</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div id="nameModal" class="modal-overlay">
+    <div class="modal-card">
+      <div class="modal-emoji">🐾</div>
+      <h2>Bem-vindo(a), treinador(a)!</h2>
+      <p>Como você quer ser chamado no seu checklist de Pals?</p>
+      <input id="nameInput" type="text" maxlength="30" placeholder="Digite seu nome..." autocomplete="off" />
+      <button id="startBtn">Começar aventura</button>
+    </div>
+  </div>
+
+  <div id="app" class="app hidden">
+    <header class="app-header">
+      <h1 class="title">Meus Pals</h1>
+      <p class="subtitle">Marque os Pals do Palworld que você já capturou. Tudo fica salvo no seu navegador.</p>
+
+      <div class="player-bar">
+        <span class="player-name">
+          👤 <strong id="playerNameDisplay"></strong>
+          <button id="editNameBtn" class="link-btn" title="Trocar nome">✎</button>
+        </span>
+        <span class="score-badge">🏆 <span id="scoreValue">0</span> pts</span>
+      </div>
+    </header>
+
+    <section class="progress-card">
+      <div class="progress-head">
+        <span>Progresso da coleção</span>
+        <span><strong id="capturedCount">0</strong> / <span id="totalCount">296</span></span>
+      </div>
+      <div class="progress-track">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
+      <p class="progress-msg" id="progressMsg">Bora capturar o primeiro Pal! (0% concluído)</p>
+    </section>
+
+    <div class="search-box">
+      <span class="search-icon">🔍</span>
+      <input id="searchInput" type="text" placeholder="Buscar Pal por nome..." autocomplete="off" />
+      <button id="clearSearch" class="clear-btn hidden" title="Limpar busca">✕</button>
+    </div>
+
+    <div class="filter-tabs">
+      <button class="filter-btn active" data-filter="all">Todos</button>
+      <button class="filter-btn" data-filter="captured">Capturados</button>
+      <button class="filter-btn" data-filter="missing">Faltando</button>
+    </div>
+
+    <ul class="pal-list" id="palList"></ul>
+
+    <p class="empty-msg hidden" id="emptyMsg">Nenhum Pal encontrado com esse filtro/busca.</p>
+
+    <p class="footer-note">Lista consolidada a partir do checklist de Pals do Palworld · Progresso salvo apenas localmente no navegador.</p>
+
+    <footer class="credit-footer">
+      Desenvolvido por <a href="https://anajaraa.github.io/anajaramlucas/" target="_blank" rel="noopener noreferrer">Anajara Lucas</a> - 2026
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
