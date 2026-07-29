@@ -114,6 +114,20 @@ function renderList() {
     avatar.style.background = avatarColorFor(pal);
     avatar.textContent = initials(pal);
 
+    const avatarImg = document.createElement("img");
+    avatarImg.className = "pal-avatar-img";
+    avatarImg.src = `pixelpal/${encodeURIComponent(pal)}.png`;
+    avatarImg.alt = pal;
+    avatarImg.loading = "lazy";
+    avatarImg.addEventListener("error", () => {
+      avatarImg.remove();
+    }, { once: true });
+    avatarImg.addEventListener("load", () => {
+      avatar.textContent = "";
+      avatar.style.background = "transparent";
+    }, { once: true });
+    avatar.appendChild(avatarImg);
+
     const info = document.createElement("div");
     info.className = "pal-info";
     const nameEl = document.createElement("span");

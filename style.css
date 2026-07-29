@@ -325,6 +325,7 @@ body {
 }
 
 .pal-avatar {
+  position: relative;
   width: 48px;
   height: 48px;
   border-radius: 14px;
@@ -335,6 +336,15 @@ body {
   font-weight: 700;
   font-size: 15px;
   flex-shrink: 0;
+  overflow: hidden;
+}
+
+.pal-avatar-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .pal-info {
