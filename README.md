@@ -7,9 +7,10 @@ dependências externas) — basta abrir o `index.html` no navegador.
 ## Ideia do projeto
 
 A lista completa de Pals veio do arquivo `checklist.docx` deste projeto
-(296 Pals únicos, em ordem alfabética, consolidados a partir das listas do
-Palworld.gg). Em vez de marcar `☐` manualmente num documento, a ideia é ter
-uma versão interativa no navegador:
+(295 Pals únicos, em ordem alfabética, consolidados a partir das listas do
+Palworld.gg — "Geleia do Arco-íris" foi removida da lista por ser duplicata
+de "Rainbow Slime"). Em vez de marcar `☐` manualmente num documento, a ideia
+é ter uma versão interativa no navegador:
 
 - Cada Pal vira um item de checklist com um botão de "capturado" e, ao lado,
   um contador de quantidade (`–` `N` `+`) para dizer quantos você já pegou
@@ -48,7 +49,7 @@ nenhum servidor: o progresso é local, do seu navegador, nesse computador.
 |-----------------|------------------------------------------------------------------|
 | `index.html`    | Estrutura da página (modal de nome + layout do checklist)       |
 | `style.css`     | Visual (gradientes pastel, cards, barra de progresso, checkboxes)|
-| `script.js`     | Lista dos 296 Pals + lógica de checklist, busca, filtros e localStorage |
+| `script.js`     | Lista dos 295 Pals + lógica de checklist, busca, filtros e localStorage |
 | `checklist.docx`| Lista original em Word que serviu de base para os dados          |
 
 ## Dados salvos no `localStorage`
