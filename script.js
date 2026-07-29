@@ -112,7 +112,11 @@ function renderList() {
     const avatar = document.createElement("div");
     avatar.className = "pal-avatar";
     avatar.style.background = avatarColorFor(pal);
-    avatar.textContent = initials(pal);
+
+    const avatarInitials = document.createElement("span");
+    avatarInitials.className = "pal-avatar-initials";
+    avatarInitials.textContent = initials(pal);
+    avatar.appendChild(avatarInitials);
 
     const avatarImg = document.createElement("img");
     avatarImg.className = "pal-avatar-img";
@@ -123,7 +127,7 @@ function renderList() {
       avatarImg.remove();
     }, { once: true });
     avatarImg.addEventListener("load", () => {
-      avatar.textContent = "";
+      avatarInitials.remove();
       avatar.style.background = "transparent";
     }, { once: true });
     avatar.appendChild(avatarImg);
